@@ -242,7 +242,7 @@ int main() {
 }
 ```
 
-线程函数fbi()将会在不同的线程中运行，传入`uv_work_t`结构体参数，一旦fib()函数返回，after_fib()会被event loop中的线程调用，然后被传入同样的结构体。  
+线程函数fib()将会在不同的线程中运行，传入`uv_work_t`结构体参数，一旦fib()函数返回，after_fib()会被event loop中的线程调用，然后被传入同样的结构体。  
 
 为了封装阻塞的库，常见的模式是用[baton](http://nikhilm.github.io/uvbook/utilities.html#baton)来交换数据。
 
